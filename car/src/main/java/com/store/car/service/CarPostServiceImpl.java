@@ -23,6 +23,8 @@ public class CarPostServiceImpl implements  CarPostService {
 
     @Override
     public void newPostDetails(CarPostDTO carPostDTO) {
+        CarPostEntity carPostEntity = mapCarDtoToEntity(carPostDTO);
+        carPostRepository.save(carPostEntity);
 
     }
 
